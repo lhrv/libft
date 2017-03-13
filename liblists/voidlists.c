@@ -106,7 +106,7 @@ void list_disp(l_list *list, size_t len)
     	len = (list)->len;
     printf("(%zu)[", (list)->len);
     while (i <= len)
-        printf("'%s', ",  list_elem(list, i++ - 1)->data);
+        printf("'%s', ",  (char*)list_elem(list, i++ - 1)->data);
     if (list_elem(list, i - 2)->next == NULL) // à opti/à virer?
 	    printf("(null end)");
 	if (len != (list)->len)
