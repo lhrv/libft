@@ -140,7 +140,7 @@ void		*list_elem_del(l_list **list, size_t index)
 	{
 		free(*list);
 		*list = NULL;
-		printf("list empty : freed\n");
+	//	printf("list empty : freed\n");
 	}
 	return (to_free);
 }
