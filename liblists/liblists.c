@@ -6,7 +6,7 @@
 /*   By: lhorvat <lhorvat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 20:32:40 by lhorvat           #+#    #+#             */
-/*   Updated: 2017/04/04 19:34:58 by lhorvat          ###   ########.fr       */
+/*   Updated: 2017/04/05 07:25:59 by lhorvat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,11 +152,6 @@ void		*list_elem_del(l_list **list, size_t index)
 	{
 		free(*list);
 		*list = NULL;
-<<<<<<< HEAD
-		//printf("list empty : freed\n");
-=======
-	//	printf("list empty : freed\n");
->>>>>>> c3a1204c3f6de0ec06ee2161a44d29d869d4930e
 	}
 	return (to_free);
 }
