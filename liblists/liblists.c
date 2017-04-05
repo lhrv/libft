@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   liblists.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lh <lh@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: lhorvat <lhorvat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 20:32:40 by lhorvat           #+#    #+#             */
-/*   Updated: 2017/03/19 22:14:46 by lh               ###   ########.fr       */
+/*   Updated: 2017/04/04 19:34:58 by lhorvat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,13 @@ l_list *init_list(char *data)
     return (liste);
 }
 
-void list_insert_head(l_list *liste, char *newdata)
+l_list *list_insert_head(l_list *liste, char *newdata)
 {
+    if (!liste)
+    {
+    	liste = init_list(newdata);
+    	return (liste);
+    }
     l_elem *new_elem = malloc(sizeof(*new_elem));
     if (liste == NULL || new_elem == NULL)
         exit(EXIT_FAILURE);
@@ -55,10 +60,16 @@ void list_insert_head(l_list *liste, char *newdata)
     new_elem->next = liste->first;
     liste->first = new_elem;
     liste->len++;
+    return (liste);
 }
 
-void list_insert_tail(l_list *liste, char *newdata)
+l_list *list_insert_tail(l_list *liste, char *newdata)
 {
+	if (!liste)
+    {
+    	liste = init_list(newdata);
+    	return (liste);
+    }
     l_elem *new_elem = malloc(sizeof(*new_elem));
     if (liste == NULL || new_elem == NULL)
         exit(EXIT_FAILURE);
@@ -68,6 +79,7 @@ void list_insert_tail(l_list *liste, char *newdata)
     liste->last->next = new_elem;
     liste->last = new_elem;
     liste->len++;
+    return (liste);
 }
 
 l_elem 	*list_elem(l_list *list, size_t index)
@@ -140,7 +152,11 @@ void		*list_elem_del(l_list **list, size_t index)
 	{
 		free(*list);
 		*list = NULL;
+<<<<<<< HEAD
+		//printf("list empty : freed\n");
+=======
 	//	printf("list empty : freed\n");
+>>>>>>> c3a1204c3f6de0ec06ee2161a44d29d869d4930e
 	}
 	return (to_free);
 }
