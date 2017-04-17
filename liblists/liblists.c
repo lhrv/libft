@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   liblists.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lhorvat <lhorvat@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lh <lh@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 20:32:40 by lhorvat           #+#    #+#             */
-/*   Updated: 2017/04/13 18:16:54 by lhorvat          ###   ########.fr       */
+/*   Updated: 2017/04/17 02:22:20 by lh               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,41 +45,41 @@ l_list *list_init(void *data)
 	return (liste);
 }
 
-l_list *list_insert_head(l_list *liste, void *newdata)
+l_elem 		*list_insert_head(l_list **liste, void *newdata)
 {
-	if (!liste)
+	if (!(*liste))
 	{
-		liste = list_init(newdata);
-		return (liste);
+		(*liste) = list_init(newdata);
+		return ((*liste)->first);
 	}
 	l_elem *new_elem = malloc(sizeof(*new_elem));
-	if (liste == NULL || new_elem == NULL)
+	if ((*liste) == NULL || new_elem == NULL)
 		exit(EXIT_FAILURE);
 
 	new_elem->data = newdata;
-	new_elem->next = liste->first;
-	liste->first = new_elem;
-	liste->len++;
-	return (liste);
+	new_elem->next = (*liste)->first;
+	(*liste)->first = new_elem;
+	(*liste)->len++;
+	return (new_elem);
 }
 
-l_list *list_insert_tail(l_list *liste, void *newdata)
+l_elem 		*list_insert_tail(l_list **liste, void *newdata)
 {
-	if (!liste)
+	if (!(*liste))
 	{
-		liste = list_init(newdata);
-		return (liste);
+		(*liste) = list_init(newdata);
+		return ((*liste)->first);
 	}
 	l_elem *new_elem = malloc(sizeof(*new_elem));
-	if (liste == NULL || new_elem == NULL)
+	if ((*liste) == NULL || new_elem == NULL)
 		exit(EXIT_FAILURE);
 
 	new_elem->data = newdata;
 	new_elem->next = NULL;
-	liste->last->next = new_elem;
-	liste->last = new_elem;
-	liste->len++;
-	return (liste);
+	(*liste)->last->next = new_elem;
+	(*liste)->last = new_elem;
+	(*liste)->len++;
+	return (new_elem);
 }
 
 l_elem 	*list_elem(l_list *list, size_t index)
@@ -125,6 +125,12 @@ void list_disp(l_list *list, size_t len)
 	printf("]\n");
 }
 
+
+
+
+// renvoie un pointeur sur le contenu de la data à free.
+// du coup par défaut, ça ne free que le maillon.
+// on peut faire free(list_elem_del(&list, 4)) ... ou mem_del
 void		*list_elem_del(l_list **list, size_t index)
 {
 	l_elem *prev;
@@ -156,6 +162,9 @@ void		*list_elem_del(l_list **list, size_t index)
 	return (to_free);
 }
 
+
+// à l'inverse de précédemment, cette fonction va free les maillons un par un,
+// puis free leur contenu renvoyé. donc ne marche que si les datas sont sur la heap.
 void		list_free(l_list **list)
 {
 	void	*to_free;
