@@ -6,7 +6,7 @@
 /*   By: lhorvat <lhorvat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/24 20:08:10 by lhorvat           #+#    #+#             */
-/*   Updated: 2017/01/25 14:24:38 by lhorvat          ###   ########.fr       */
+/*   Updated: 2017/04/21 16:34:06 by lhorvat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include "liblists/liblists.h"
 
 typedef struct		s_list
 {

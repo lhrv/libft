@@ -6,7 +6,7 @@
 #    By: lhorvat <lhorvat@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/26 18:25:35 by lhorvat           #+#    #+#              #
-#    Updated: 2017/01/26 18:46:58 by lhorvat          ###   ########.fr        #
+#    Updated: 2017/04/21 18:52:54 by lhorvat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,9 @@ SRCS = 	./ft_atoi.c 		\
 		./ft_strtrim.c 		\
 		./ft_tolower.c 		\
 		./ft_toupper.c 		\
+		./liblists/liblists_write.c \
+		./liblists/liblists_read.c \
+		./liblists/list_to_char.c
 
 OBJS = 	./ft_atoi.o 		\
 		./ft_bzero.o 		\
@@ -129,7 +132,10 @@ OBJS = 	./ft_atoi.o 		\
 		./ft_strtrim.o 		\
 		./ft_tolower.o 		\
 		./ft_toupper.o 		\
-
+		./liblists_write.o \
+		./liblists_read.o \
+		./list_to_char.o
+		
 FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
