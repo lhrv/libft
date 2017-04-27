@@ -6,11 +6,11 @@
 /*   By: lhorvat <lhorvat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/27 16:01:58 by lhorvat           #+#    #+#             */
-/*   Updated: 2017/04/27 16:04:47 by lhorvat          ###   ########.fr       */
+/*   Updated: 2017/04/27 18:24:13 by lhorvat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 /*
 ** returns a pointer to the data to free.

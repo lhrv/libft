@@ -6,7 +6,7 @@
 /*   By: lhorvat <lhorvat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/21 15:36:50 by lhorvat           #+#    #+#             */
-/*   Updated: 2017/04/21 19:08:53 by lhorvat          ###   ########.fr       */
+/*   Updated: 2017/04/27 18:24:16 by lhorvat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "../libft.h"
+# include "libft.h"
 
 typedef struct		s_elem
 {

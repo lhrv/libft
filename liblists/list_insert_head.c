@@ -6,11 +6,11 @@
 /*   By: lhorvat <lhorvat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/27 15:56:42 by lhorvat           #+#    #+#             */
-/*   Updated: 2017/04/27 16:00:27 by lhorvat          ###   ########.fr       */
+/*   Updated: 2017/04/27 18:24:12 by lhorvat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 t_elem			*list_insert_head(t_listc **list, void *newdata)
 {

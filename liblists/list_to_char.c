@@ -6,11 +6,11 @@
 /*   By: lhorvat <lhorvat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/21 18:44:22 by lhorvat           #+#    #+#             */
-/*   Updated: 2017/04/21 18:44:46 by lhorvat          ###   ########.fr       */
+/*   Updated: 2017/04/27 18:24:09 by lhorvat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 void			list_to_char(t_listc *list, char *dest)
 {

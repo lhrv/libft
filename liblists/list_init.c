@@ -6,11 +6,11 @@
 /*   By: lhorvat <lhorvat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/27 16:00:53 by lhorvat           #+#    #+#             */
-/*   Updated: 2017/04/27 16:01:07 by lhorvat          ###   ########.fr       */
+/*   Updated: 2017/04/27 18:24:12 by lhorvat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 t_listc			*list_init(void *data)
 {

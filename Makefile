@@ -6,7 +6,7 @@
 #    By: lhorvat <lhorvat@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/26 18:25:35 by lhorvat           #+#    #+#              #
-#    Updated: 2017/04/27 16:07:25 by lhorvat          ###   ########.fr        #
+#    Updated: 2017/04/27 18:25:29 by lhorvat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -149,7 +149,7 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAGS) -c $(SRCS)
+	gcc $(FLAGS) -c $(SRCS) -I includes
 	ar rc $(NAME) $(OBJS)
 
 clean:

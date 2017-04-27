@@ -6,11 +6,11 @@
 /*   By: lhorvat <lhorvat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/27 16:02:04 by lhorvat           #+#    #+#             */
-/*   Updated: 2017/04/27 16:02:12 by lhorvat          ###   ########.fr       */
+/*   Updated: 2017/04/27 18:24:13 by lhorvat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 /*
 ** whereas previously, this function will free link by link,
