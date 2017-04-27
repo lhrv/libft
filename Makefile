@@ -6,7 +6,7 @@
 #    By: lhorvat <lhorvat@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/26 18:25:35 by lhorvat           #+#    #+#              #
-#    Updated: 2017/04/21 18:52:54 by lhorvat          ###   ########.fr        #
+#    Updated: 2017/04/27 16:07:25 by lhorvat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,9 +70,13 @@ SRCS = 	./ft_atoi.c 		\
 		./ft_strtrim.c 		\
 		./ft_tolower.c 		\
 		./ft_toupper.c 		\
-		./liblists/liblists_write.c \
-		./liblists/liblists_read.c \
-		./liblists/list_to_char.c
+		./liblists/list_to_char.c \
+		./liblists/list_insert_head.c \
+		./liblists/list_insert_tail.c \
+		./liblists/list_init.c \
+		./liblists/list_free.c \
+		./liblists/list_elem.c \
+		./liblists/list_elem_del.c
 
 OBJS = 	./ft_atoi.o 		\
 		./ft_bzero.o 		\
@@ -132,9 +136,13 @@ OBJS = 	./ft_atoi.o 		\
 		./ft_strtrim.o 		\
 		./ft_tolower.o 		\
 		./ft_toupper.o 		\
-		./liblists_write.o \
-		./liblists_read.o \
-		./list_to_char.o
+		./list_to_char.o \
+		./list_insert_head.o \
+		./list_insert_tail.o \
+		./list_init.o \
+		./list_free.o \
+		./list_elem.o \
+		./list_elem_del.o
 		
 FLAGS = -Wall -Wextra -Werror
 
